@@ -1,0 +1,30 @@
+nav {
+  background: #1e1e2f;               // Dark navy color
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+
+    &:hover {
+      background: #3d3d5c;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
+
+  a.active-link {
+    background: #6c63ff;
+    color: #fff;
+  }
+}

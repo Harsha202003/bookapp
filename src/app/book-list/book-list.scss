@@ -1,0 +1,66 @@
+
+
+/* Center the whole content */
+.container.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+/* Card style */
+.table-card {
+  width: 70%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Header Style */
+.headers {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  background-color: #989fa7;     /* Light grey background */
+  padding: 12px 20px;            /* Spacing inside */
+  border-radius: 10px;           /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+
+.table-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Add Button */
+.btn.add {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+  transition: 0.2s ease;
+}
+

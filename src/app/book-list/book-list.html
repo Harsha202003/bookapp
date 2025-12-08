@@ -1,0 +1,37 @@
+
+<div *ngIf="booklist; else err" class="container tab">
+
+  <div class="headers">
+    <h2 class="table-title">Books List</h2>
+    <button type="button" class="btn add" (click)="addbook()">Add Book</button>
+  </div>
+
+  <div class="table-card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Book Name</th>
+          <th>Action</th>
+          <th>Action</th>
+          <!-- <th>Action</th> -->
+        </tr>
+      </thead>
+
+      <tbody class="text">
+        <tr *ngFor="let book of booklist">
+          <td>{{book.id}}</td>
+          <td>{{book.title}}</td>
+          <!-- <td><button class="btn btn-primary" (click)="editBook(book.id)">Update</button></td> -->
+          <td><button class="btn btn-danger" (click)="deletebook(book.id)">Delete</button></td>
+          <td><button class="btn btn-primary" (click)="viewBook(book.id)">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<ng-template #err>
+  <p class="text-danger">error fetching data</p>
+</ng-template>

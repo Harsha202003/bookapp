@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="book-card">
+    <h2>{{ books.title }}</h2>
+    <img src="">
+    <p><strong>Id:</strong> {{ books.id }}</p>
+    <p><strong>Author:</strong> {{ books.author }}</p>
+    <p><strong>Description:</strong> {{ books.description }}</p>
+    <p><strong>Price:</strong> ₹{{ books.price }}</p>
+
+    <p><strong>Published Date:</strong> {{ books.published_date }}</p>
+
+    <button class="btn btn-secondary" routerLink="/booklist" (click)="backtolist()">Back</button>
+  </div>
+</div>

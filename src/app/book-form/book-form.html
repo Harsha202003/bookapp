@@ -1,0 +1,37 @@
+<div class="form-wrapper">
+    <div class="book-form">
+        <h2 class="text-center text-info">Add book  </h2>
+        <div class="group">
+             <div class="group">
+        
+          
+            <div class="group">
+                <label>Title</label>
+                 <input type="text" required  [(ngModel)]="newBook.title" name="title" >
+            </div>
+            <div class="group">
+                 <label>Author</label>
+                 <input type="text" required [(ngModel)]="newBook.author" name="author" >
+
+            </div>
+            <div class="group">
+                 <label>Published Date</label>
+                <input type="date" required [(ngModel)]="newBook.published_date" name="published" >
+            </div>
+
+            <div class="group">
+                <label>Description</label>
+                 <textarea required [(ngModel)]="newBook.description" name="description" ></textarea>
+            </div>
+            <div class="group">
+                 <label>Price</label>
+                <input type="number" required [(ngModel)]="newBook.price" name="published" >
+            </div>
+
+            <button class="btn btn-primary" (click)="saveBook()">Save</button>
+            <button class="btn btn-danger"(click)="closeform()">Cancel</button>
+            
+
+        </div>
+    </div>
+</div>

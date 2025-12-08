@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "description": "A story about following dreams and destiny.",
+      "price": 299,
+      "published_date": "1988-04-01"
+    },
+    {
+      "id": "2",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "description": "A guide to building good habits and breaking bad ones.",
+      "price": 399,
+      "published_date": "2018-10-16"
+    },
+    {
+      "id": "aa78",
+      "title": "wegfiuadfg",
+      "author": "adfg",
+      "description": "",
+      "price": "",
+      "published_date": ""
+    }
+  ]
+}
