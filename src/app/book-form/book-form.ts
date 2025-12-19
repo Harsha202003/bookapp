@@ -6,37 +6,50 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-book-form',
-  standalone:true,
-  imports: [FormsModule,CommonModule],
+  standalone: true,
+  imports: [FormsModule, CommonModule],
   templateUrl: './book-form.html',
   styleUrl: './book-form.scss',
 })
 export class BookForm {
 
-newBook = {
-  
-  title: '',
-  author: '',
-  description: '',
-  price:'',
-  published_date:'',  
-};
+  newBook = {
 
-constructor(private ts:Bookservices , private router:Router){}
-  
-    saveBook() {
-    this.ts.addBook(this.newBook).subscribe(() => {
-      
-      this.newBook = {title: '', author: '',published_date:'',description:'',price:'' };
-      alert("Book Added Successfully!");
-       this.router.navigate(['/booklist']);
+    title: '',
+    author: '',
+    description: '',
+    price: '',
+    published_date: '',
+  };
+  bookForm: any;
+  booklist: any;
+  cdr: any;
+
+  constructor(private ts: Bookservices, private router: Router) { }
+
+  onSubmit() {
+    const bookData = {
+      title: this.bookForm.value.title,
+      author: this.bookForm.value.author,
+      price: this.bookForm.value.price
+    };
+
+    this.ts.addBook(bookData).subscribe(() => {
+      this.loadBooks();
     });
   }
 
-  
-  closeform(){
+  loadBooks() {
+    this.ts.getbooks().subscribe((data) => {
+      this.booklist = data;
+      console.log(this.booklist);
+      this.cdr.detectChanges();
+    });
+  }
+
+  closeform() {
     this.router.navigate(['/booklist']);
-    
+
   }
 
 

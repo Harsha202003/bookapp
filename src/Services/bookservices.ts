@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class Bookservices {
-  
+
   public jsonUrl = 'http://localhost:3000/books';
 
   constructor(private http: HttpClient) { }
@@ -15,20 +15,21 @@ export class Bookservices {
     return this.http.get(this.jsonUrl);
   }
 
-  deletebook(id:number){
-    return this.http.delete(this.jsonUrl+'/'+id)
+  deletebook(id: number) {
+    return this.http.delete(this.jsonUrl + '/' + id)
   }
 
-    addBook(bookData: any): Observable<any> {
+  addBook(bookData: any): Observable<any> {
     return this.http.post(this.jsonUrl, bookData);
   }
-  
-  updateBook(id: any, data: any) {
-  return this.http.put(`${this.jsonUrl}/${id}`, data);
-}
 
-getBookById(id: any): Observable<any> {
-  return this.http.get(`${this.jsonUrl}/${id}`);
-}
+
+  updateBook(id: any, data: any) {
+    return this.http.put(`${this.jsonUrl}/${id}`, data);
+  }
+
+  getBookById(id: any): Observable<any> {
+    return this.http.get(`${this.jsonUrl}/${id}`);
+  }
 
 }
